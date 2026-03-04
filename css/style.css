@@ -34,6 +34,10 @@ body {
     color: rgba(255, 255, 255, 0.5);
 }
 
+.about-icon a:active {
+    color: rgba(255, 255, 255, 0.7);
+}
+
 /* Main layout - goblet centered */
 .center {
     display: flex;
@@ -49,6 +53,11 @@ body {
     justify-content: center;
     align-items: center;
     cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.centerImg:active {
+    transform: scale(0.97);
 }
 
 .centerImg img {
@@ -65,6 +74,51 @@ body {
     font-style: italic;
     color: whitesmoke;
     margin-top: 10px;
+}
+
+/* Counter */
+.counter {
+    font-family: 'Crimson Pro', serif;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.5);
+    margin-top: 6px;
+}
+
+/* Category filters */
+.category-filters {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 20px;
+    max-width: 600px;
+}
+
+.cat-btn {
+    font-family: 'Crimson Pro', serif;
+    font-size: 14px;
+    padding: 6px 14px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 20px;
+    background: transparent;
+    color: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s, border-color 0.2s;
+}
+
+.cat-btn:hover {
+    border-color: rgba(255, 255, 255, 0.6);
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.cat-btn:active {
+    transform: scale(0.95);
+}
+
+.cat-btn.active {
+    background: rgba(255, 255, 255, 0.15);
+    color: whitesmoke;
+    border-color: rgba(255, 255, 255, 0.6);
 }
 
 /* Fade-in animation */
@@ -90,14 +144,14 @@ body {
 .aboutText {
     text-align: left;
     font-size: 18px;
-    color: slategray;
+    color: #c0c8d0;
     text-decoration: none;
     display: inline-block;
 }
 
 .aboutTextSmall {
     font-size: 12px;
-    color: slategray;
+    color: #a0a8b0;
 }
 
 .fa-heart {
@@ -106,40 +160,53 @@ body {
 }
 
 .btn-linkInsta {
-    color: slategray;
+    color: #c0c8d0;
     text-decoration: none;
 }
 
 .btn-linkInsta:hover {
-    color: rgba(255, 255, 255, 0.5);
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.btn-linkInsta:active {
+    color: rgba(255, 255, 255, 0.9);
 }
 
 /* Terms page */
 .terms-content {
     margin: 20px;
-    color: slategray;
+    color: #b0b8c0;
     max-width: 800px;
+    line-height: 1.6;
 }
 
 .terms-content h2 {
     margin-top: 20px;
     margin-bottom: 10px;
-    color: slategray;
+    color: #d0d8e0;
 }
 
 .terms-content p {
     margin-bottom: 10px;
-    color: slategray;
+    color: #b0b8c0;
 }
 
 .terms-content ol {
     margin-left: 20px;
     margin-bottom: 10px;
-    color: slategray;
+    color: #b0b8c0;
 }
 
 .terms-content a {
-    color: slategray;
+    color: #c0c8d0;
+}
+
+.terms-content a:hover {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.terms-content a:active {
+    color: rgba(255, 255, 255, 0.9);
 }
 
 /* Responsive */
@@ -150,6 +217,10 @@ body {
 
     .argStyle {
         font-size: 18px;
+        padding: 0 10px;
+    }
+
+    .category-filters {
         padding: 0 10px;
     }
 }
