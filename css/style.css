@@ -5,15 +5,23 @@
 }
 
 html {
-    background: url("../img/bg.jpg") no-repeat center center fixed;
-    background-size: cover;
     min-height: 100vh;
+    min-height: 100dvh;
 }
 
 body {
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    background: transparent;
     min-height: 100vh;
+    min-height: 100dvh;
+    background: url("../img/bg.jpg") no-repeat center center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+@supports (-webkit-touch-callout: none) {
+    body {
+        background-attachment: scroll;
+    }
 }
 
 /* About icon - top right */
@@ -45,7 +53,9 @@ body {
     align-items: center;
     justify-content: center;
     min-height: 100vh;
+    min-height: 100dvh;
     padding: 20px;
+    overflow-x: hidden;
 }
 
 .centerImg {
